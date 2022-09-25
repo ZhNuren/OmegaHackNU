@@ -1,0 +1,10 @@
+<input type="file" (change)="ReadExcel($event)" content=".xlsx">
+<select [(ngModel)]="id" (change)="selectChange()">
+  <option *ngFor="let o of excelData; index as i">
+    {{i}}
+  </option>
+</select>
+<label>Number of points: {{pointCount}}</label>
+<button (click)="animate()">Animate</button>
+<div class="map" id="map" #mapElement></div>
+<router-outlet></router-outlet>
